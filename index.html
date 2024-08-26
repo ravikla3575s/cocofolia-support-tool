@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ココフォリア支援ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ココフォリア支援ツール</h1>
+        <!-- 装備入力セクション -->
+        <div class="input-section">
+            <label for="equipment">現在の装備を選択してください:</label>
+            <select id="equipment">
+                <option value="heavy_equipment">装備A（通常装備）</option>
+                <option value="light_equipment">装備B（ライト＆ファスト）</option>
+            </select>
+        </div>
+
+        <!-- 標高入力セクション -->
+        <div class="input-section">
+            <label for="elevation">現在の標高を選択してください:</label>
+            <select id="elevation">
+                <option value="high_altitude">3000~8000m</option>
+                <option value="death_zone">9000m以上（デスゾーン）</option>
+            </select>
+        </div>
+
+        <!-- 天候入力セクション -->
+        <div class="input-section">
+            <label for="weather">天候を選択してください:</label>
+            <select id="weather">
+                <option value="clear">快晴無風</option>
+                <option value="snow">降雪 (ナビゲート -10%)</option>
+                <option value="wind">強風 (ナビゲート -30%)</option>
+                <option value="blizzard">猛吹雪 (ナビゲート -50%)</option>
+            </select>
+        </div>
+
+        <!-- ダイスロールの選択セクション -->
+        <div class="input-section">
+            <label for="rollType">ダイスロールを選択してください:</label>
+            <select id="rollType">
+                <option value="CCB">CCB (スペシャル判定有技能ロール)</option>
+                <option value="SAN">SANチェック</option>
+                <option value="登攀">登攀</option>
+                <option value="ビレイ">ビレイ</option>
+                <option value="ナビゲート">ナビゲート</option>
+                <option value="幸運">幸運</option>
+                <option value="回避">回避</option>
+                <option value="跳躍">跳躍</option>
+                <option value="こぶし">こぶし</option>
+                <option value="医学">医学</option>
+                <option value="回復量1d3">回復量 (1d3)</option>
+                <option value="回復量2d3">回復量 (2d3)</option>
+                <option value="聞き耳">聞き耳</option>
+                <option value="忍び歩き">忍び歩き</option>
+                <option value="追跡">追跡</option>
+                <option value="目星">目星</option>
+                <option value="信用">信用</option>
+                <option value="アイデア">アイデア</option>
+                <option value="図書館">図書館</option>
+                <option value="物理学">物理学</option>
+                <option value="薬学">薬学</option>
+                <option value="クトゥルフ神話技能">クトゥルフ神話技能</option>
+                <option value="STR">STR×5</option>
+                <option value="CON">CON×5</option>
+                <option value="POW">POW×5</option>
+                <option value="DEX">DEX×5</option>
+                <option value="APP">APP×5</option>
+                <option value="SIZ">SIZ×5</option>
+                <option value="INT">INT×5</option>
+                <option value="EDU">EDU×5</option>
+            </select>
+        </div>
+        <!-- コマンド出力セクション -->
+        <div class="output-section">
+            <h2>ダイスロールコマンド</h2>
+            <p id="diceCommand">1D100>= {ナビゲート} - [天候補正]</p>
+            <button id="copyCommand">コマンドをコピー</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
